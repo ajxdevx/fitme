@@ -1,0 +1,27 @@
+[project]
+name = "fitme"
+version = "1.0.0"
+description = "FitMe — AI virtual try-on (Gemini and Vertex AI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Anass Jid" }]
+dependencies = [
+    "google-genai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+vertex = ["google-auth>=2.0.0"]
+preprocess = ["mediapipe>=0.10.0", "opencv-contrib-python>=4.8.0"]
+
+[project.scripts]
+fitme = "fitme.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fitme*"]

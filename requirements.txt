@@ -1,0 +1,4 @@
+# FitMe — install with: pip install -e ".[vertex,preprocess]"
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+pillow>=10.0.0
